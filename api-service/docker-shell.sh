@@ -6,6 +6,7 @@ set -e
 # Define some environment variables
 # Automatic export to the environment of subsequently executed commands
 # source: the command 'help export' run in Terminal
+# NOTE: Defining global VARs to use, mainly for paths to easily grab
 export IMAGE_NAME="mushroom-app-api-service"
 export BASE_DIR=$(pwd)
 export PERSISTENT_DIR=$(pwd)/../persistent-folder/
@@ -23,4 +24,6 @@ docker run --rm --name $IMAGE_NAME -ti \
 --mount type=bind,source="$PERSISTENT_DIR",target=/persistent \
 --mount type=bind,source="$SECRETS_DIR",target=/secrets \
 -p 9000:9000 \
+
+# Create 2 containers -> DEV 1 or 0 is Dev or production
 -e DEV=1 $IMAGE_NAME
