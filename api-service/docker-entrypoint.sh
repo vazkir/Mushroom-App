@@ -25,6 +25,8 @@ The following commands are available:
 \033[0m
 "
 
+# Determine what to call on startup, shell for dev because we want interactive
+# And production we don't want anything interactive, just the production running
 if [ "${DEV}" = 1 ]; then
   pipenv shell
 else

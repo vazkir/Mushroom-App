@@ -8,6 +8,8 @@ verify_ssl = true
 [packages]
 uvicorn = "*"
 fastapi = "*"
+google-auth = "*"
+google-cloud-storage = "*"
 
 [requires]
 python_version = "3.8"
