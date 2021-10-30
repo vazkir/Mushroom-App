@@ -10,6 +10,8 @@ uvicorn = "*"
 fastapi = "*"
 google-auth = "*"
 google-cloud-storage = "*"
+pandas = "*"
+tensorflow = "*"
 
 [requires]
 python_version = "3.8"
