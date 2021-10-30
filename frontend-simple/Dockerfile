@@ -7,10 +7,16 @@ FROM node:14.9.0-buster-slim
 RUN set -ex; \
     apt-get update && \
     apt-get upgrade -y && \
+
+    # -y means whenever there is a question say yes
+    # We need openssl installed 
     apt-get install -y --no-install-recommends openssl && \
     npm install -g http-server && \
 
     # Create a user so we don't run the app as root, add a user called app
+    # -d /home/app -> Home dir for our app
+    # -u 2000 -> Is the user
+    # Set the openssl password to Passw0rd, so we can do https (I think)
     useradd -ms /bin/bash app -d /home/app -G sudo -u 2000 -p "$(openssl passwd -1 Passw0rd)" && \
     mkdir -p /app && \
 

@@ -16,7 +16,9 @@ docker build -t $IMAGE_NAME -f Dockerfile .
 # Run the container
 # --mount: Attach a filesystem mount to the container
 # -p: Publish a container's port(s) to the host (host_port: container_port) (source: https://dockerlabs.collabnix.com/intermediate/networking/ExposingContainerPort.html)
+# -ti -> Interactive terminal
 # NOTE: Instead of having to run this very long command each time we put it into this script
+# We mount our current directory to the image, basically like symlinkin so it's available in the container
 docker run --rm --name $IMAGE_NAME -ti \
 --mount type=bind,source="$BASE_DIR",target=/app \
 -p 8080:8080 $IMAGE_NAME
