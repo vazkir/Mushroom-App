@@ -19,11 +19,10 @@ docker build -t $IMAGE_NAME -f Dockerfile .
 # --mount: Attach a filesystem mount to the container
 # -p: Publish a container's port(s) to the host (host_port: container_port) (source: https://dockerlabs.collabnix.com/intermediate/networking/ExposingContainerPort.html)
 # NOTE: We mount all the local directories we want the actual container to have access to
+# Create 2 containers -> DEV 1 or 0 is Dev or production
 docker run --rm --name $IMAGE_NAME -ti \
 --mount type=bind,source="$BASE_DIR",target=/app \
 --mount type=bind,source="$PERSISTENT_DIR",target=/persistent \
 --mount type=bind,source="$SECRETS_DIR",target=/secrets \
 -p 9000:9000 \
-
-# Create 2 containers -> DEV 1 or 0 is Dev or production
 -e DEV=1 $IMAGE_NAME
