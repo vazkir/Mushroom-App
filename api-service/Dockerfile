@@ -45,10 +45,15 @@ EXPOSE 9000
 USER app
 WORKDIR /app
 
-# Install python packages
 # Make the new user 'app' owner of the Pipfile and Pipfile.lock
+# chown -> Change Ownership
+# The --chown feature is only supported on Dockerfiles used to build Linux containers,
+# ADD [--chown=<user>:<group>] <src>... <dest>
+# --chown flags request specific ownership of the content added
 ADD --chown=app:app Pipfile Pipfile.lock /app/
 
+
+# Install python packages from the lock file
 RUN pipenv sync
 
 # Add the rest of the source code. This is done last so we don't invalidate all
