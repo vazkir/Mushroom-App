@@ -3,7 +3,6 @@ import json
 import numpy as np
 import tensorflow as tf
 from tensorflow.python.keras import backend as K
-from tensorflow.keras.models import Model
 import tensorflow_hub as hub
 from api.local import RUN_LOCAL
 

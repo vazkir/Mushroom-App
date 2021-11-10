@@ -14,6 +14,8 @@ pandas = "*"
 python-dotenv = "*"
 tensorflow-hub = "*"
 python-multipart = "*"
+tensorflow-macos = "*"
+tensorflow-metal = "*"
 
 [requires]
 python_version = "3.8"
