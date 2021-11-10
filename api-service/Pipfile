@@ -12,9 +12,8 @@ google-auth = "*"
 google-cloud-storage = "*"
 pandas = "*"
 python-dotenv = "*"
-tensorflow-hub = "*"
 python-multipart = "*"
-tensorflow-macos = "*"
+tensorflow-macos = "<2.6"
 tensorflow-metal = "*"
 
 [requires]
