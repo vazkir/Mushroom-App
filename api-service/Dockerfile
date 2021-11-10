@@ -66,4 +66,5 @@ ADD --chown=app:app . /app
 # go to another shell script which will:
 # - Put in some logic like differentiating between dev and production
 # - Define some commands we can use
+# If nothing has changed the docker-entrypoint will be ran directly (I believe)
 ENTRYPOINT ["/bin/bash","./docker-entrypoint.sh"]
