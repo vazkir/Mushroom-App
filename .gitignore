@@ -10,4 +10,3 @@ geckodriver.log
 
 # Neede because locally used specific macos versions of tf
 /api-service/.env
-/api-service/Pipfile.lock
