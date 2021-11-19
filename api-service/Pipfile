@@ -13,8 +13,13 @@ google-cloud-storage = "*"
 pandas = "*"
 python-dotenv = "*"
 python-multipart = "*"
-tensorflow-macos = "<2.6"
-tensorflow-metal = "*"
+tensorflow = {file = "https://tf.novaal.de/barcelona/tensorflow-2.6.0-cp38-cp38-linux_x86_64.whl"}
+tensorflow-hub = "*"
+tensorflow-estimator = "==2.6.0"
+keras = "==2.6.0"
 
 [requires]
 python_version = "3.8"
+
+[pipenv]
+allow_prereleases = true

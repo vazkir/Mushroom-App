@@ -1,1 +1,1 @@
-RUN_LOCAL = True
+RUN_LOCAL = False
