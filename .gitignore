@@ -4,8 +4,6 @@ geckodriver.log
 /persistent-folder
 /secrets
 /data-collector/docker-shell.sh
-/database-server
-/deployment
 
 
 # Neede because locally used specific macos versions of tf
