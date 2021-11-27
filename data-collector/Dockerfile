@@ -46,7 +46,6 @@ RUN apt-get update && apt-get install -y \
     pip install pipenv && \
     mkdir -p /app
 
-
 # defines the working directory for the rest of the instructions in the Dockerfile; this adds metadata to the image config
 # in this case, we're creating the app directory in the Docker container and will be performing subsequent commands (as seen below) from that directory
 # source: https://dockerlabs.collabnix.com/beginners/dockerfile/WORKDIR_instruction.html
